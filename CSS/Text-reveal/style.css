@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body{ 
+    background-color: #a23d3d;
+    height: 100vh;
+    display: grid;
+    place-items: center; 
+}
+
+h1{ 
+    font-size: 88px;  
+    color: aliceblue;
+    font-weight: bold;
+    position: relative;
+    border: 7px solid black;
+    padding: 5px; 
+} 
+
+
+h1::before{
+    padding: 5px;
+    content: "SHAHZAN...";
+    color: rgba(32, 198, 240, 0.874);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-right: 2px solid rgba(0, 0, 0, 0.874);
+    overflow: hidden; 
+    animation: Text-reveal 2s linear infinite;
+}
+
+
+@keyframes Text-reveal {
+    0%{
+       width: 0%;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
